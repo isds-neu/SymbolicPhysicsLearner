@@ -1,6 +1,6 @@
 # SymbolicPhysicsLearner
 
-![alt text](http://url/to/img.png)
+![logo](https://github.com/isds-neu/SymbolicPhysicsLearner/blob/main/logo-png.png?raw=true)
 
 source code and examples for Symbolic physics learner: Discovering governing equations via Monte Carlo tree search. 
 
