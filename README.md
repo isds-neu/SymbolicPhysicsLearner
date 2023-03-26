@@ -1,6 +1,6 @@
-# SymbolicPhysicsLearner
-
 ![logo](spl-logo.png)
+
+# SymbolicPhysicsLearner
 
 source code and examples for Symbolic physics learner: Discovering governing equations via Monte Carlo tree search. 
 
