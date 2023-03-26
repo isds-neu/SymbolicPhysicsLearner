@@ -15,13 +15,30 @@ The following packages are not included in the requirements list. Please install
 2. SINDy: `pip install pysindy` https://pysindy.readthedocs.io/en/latest/
 3. Deep Symbolic Regression: refer to [dso](https://github.com/brendenpetersen/deep-symbolic-optimization)
 
-### baseline models
+## Datasets
+### symbolic regression data
+Go to  `SymbolicPhysicsLearner/regression_task` and run
+```
+python makedatasets.py --task=nguyen-1
+```
+### dropping ball experiment data 
+source data is from https://github.com/briandesilva/discovery-of-physics-from-data
+
+To proces the data into the input of SPL model, go to  `SymbolicPhysicsLearner/physics_task` and run
+```
+python make_datasets_balldrop.py
+```
+### Lorenz dataset
+Lorenz experimental dataset is simulted by MATLAB `ode113` function. 
+
+### double pendulum dataset
+Double Pendulum dataset is from camera-recorded experiments provided by https://developer.ibm.com/exchanges/data/all/double-pendulum-chaotic/
+
+Check more details about its pre-processing from `SymbolicPhysicsLearner/dynamics_task/dp_makedata.ipynb`
 
 
 
-
-
-## Paper citations (temporary) 
+## Citing the paper (temporary) 
 ```
 @article{sun2022symbolic,
   title={Symbolic physics learner: Discovering governing equations via Monte Carlo tree search},
