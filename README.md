@@ -17,16 +17,16 @@ The following packages are not included in the requirements list. Please install
 
 ## Datasets
 ### symbolic regression data
-Go to  `SymbolicPhysicsLearner/regression_task` and run
+To generate training and testing datasets for Nguyen's benchmark problems, run
 ```
-python makedatasets.py --task=nguyen-1
+python regression_task/make_datasets.py --task=nguyen-1
 ```
 ### dropping ball experiment data 
 source data is from https://github.com/briandesilva/discovery-of-physics-from-data
 
-To proces the data into the input of SPL model, go to  `SymbolicPhysicsLearner/physics_task` and run
+To proces the data into the input of SPL model, run
 ```
-python make_datasets_balldrop.py
+python physics_task/make_datasets_balldrop.py
 ```
 ### Lorenz dataset
 Lorenz experimental dataset is simulted by MATLAB `ode113` function. 
@@ -34,9 +34,39 @@ Lorenz experimental dataset is simulted by MATLAB `ode113` function.
 ### double pendulum dataset
 Double Pendulum dataset is from camera-recorded experiments provided by https://developer.ibm.com/exchanges/data/all/double-pendulum-chaotic/
 
-Check more details about its pre-processing from `SymbolicPhysicsLearner/dynamics_task/dp_makedata.ipynb`
+Check more details about its pre-processing from `dynamics_task/dp_makedata.ipynb`
 
+## Run Model
+### symbolic regression job
+```
+import sys
+import numpy as np
+sys.path.append(r'../')
+from spl_train import run_spl
 
+output_folder = 'results_dump/' ## directory to save discovered results
+save_eqs = True                ## if true, discovered equations are saved to "output_folder" dir
+
+task = 'nguyen-1'
+all_eqs, success_rate, all_times = run_spl(task, 
+                                           num_run=100, 
+                                           transplant_step=10000)
+                                           
+if save_eqs:
+    output_file = open(output_folder + task + '.txt', 'w')
+    for eq in all_eqs:
+        output_file.write(eq + '\n')
+    output_file.close()
+
+print('success rate :', "{:.0%}".format(success_rate))
+print('average discovery time is', np.round(np.mean(all_times), 3), 'seconds')                                          
+```
+
+### physics discovery job
+refer to example in `physics_task/balldrop_tasks.ipynb`
+
+### nonlinear dynamics discovery job
+refer to example in `dynamics_task/spl double pendulum.ipynb` and `dynamics_task/spl lorenz.ipynb`
 
 ## Citing the paper (temporary) 
 ```
