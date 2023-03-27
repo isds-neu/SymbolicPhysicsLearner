@@ -38,7 +38,7 @@ Check more details about its pre-processing from `dynamics_task/dp_makedata.ipyn
 
 ## Run Model
 ### symbolic regression job
-The job configurations of Nguyen's benchmark problems are included in the source code. To run experiments with Symbolic Physics Learner, use
+Job configurations for Nguyen's benchmark problems are already included. To run experiments with Symbolic Physics Learner, use
 ```
 import sys
 import numpy as np
