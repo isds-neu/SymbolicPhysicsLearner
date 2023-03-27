@@ -38,6 +38,7 @@ Check more details about its pre-processing from `dynamics_task/dp_makedata.ipyn
 
 ## Run Model
 ### symbolic regression job
+The job configurations of Nguyen's benchmark problems are included in the source code. To run experiments with Symbolic Physics Learner, use
 ```
 import sys
 import numpy as np
@@ -61,6 +62,7 @@ if save_eqs:
 print('success rate :', "{:.0%}".format(success_rate))
 print('average discovery time is', np.round(np.mean(all_times), 3), 'seconds')                                          
 ```
+To use base-GP model or Deep Symbolic Regression model, please check `run_gp.py` and `run_dsr.py`. 
 
 ### physics discovery job
 refer to examples in `physics_task/balldrop_tasks.ipynb`
