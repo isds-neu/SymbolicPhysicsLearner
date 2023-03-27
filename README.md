@@ -63,10 +63,10 @@ print('average discovery time is', np.round(np.mean(all_times), 3), 'seconds')
 ```
 
 ### physics discovery job
-refer to example in `physics_task/balldrop_tasks.ipynb`
+refer to examples in `physics_task/balldrop_tasks.ipynb`
 
 ### nonlinear dynamics discovery job
-refer to example in `dynamics_task/spl double pendulum.ipynb` and `dynamics_task/spl lorenz.ipynb`
+refer to examples in `dynamics_task/spl double pendulum.ipynb` and `dynamics_task/spl lorenz.ipynb`
 
 ## Citing the paper (temporary) 
 ```
