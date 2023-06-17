@@ -70,12 +70,14 @@ refer to examples in `physics_task/balldrop_tasks.ipynb`
 ### nonlinear dynamics discovery job
 refer to examples in `dynamics_task/spl double pendulum.ipynb` and `dynamics_task/spl lorenz.ipynb`
 
-## Citing the paper (temporary) 
+## Citing the paper
 ```
-@article{sun2022symbolic,
-  title={Symbolic physics learner: Discovering governing equations via Monte Carlo tree search},
-  author={Sun, Fangzheng and Liu, Yang and Wang, Jian-Xun and Sun, Hao},
-  journal={arXiv preprint arXiv:2205.13134},
-  year={2022}
+@inproceedings{
+sun2023symbolic,
+title={Symbolic Physics Learner: Discovering governing equations via Monte Carlo tree search},
+author={Fangzheng Sun and Yang Liu and Jian-Xun Wang and Hao Sun},
+booktitle={The Eleventh International Conference on Learning Representations },
+year={2023},
+url={https://openreview.net/forum?id=ZTK3SefE8_Z}
 }
 ```
